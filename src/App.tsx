@@ -18,7 +18,7 @@ import React, { useState } from "react";
 const YOUR_NAME = "Yaduraj";
 const HER_NAME = "Adithi";
 const TAGLINE = "Every day with you is my favorite adventure.";
-const IMPORTANT_DATE = "2023-06-14"; // YYYY-MM-DD
+const IMPORTANT_DATE = "2025-07-13"; // YYYY-MM-DD
 const PRIMARY_HASHTAG = "";
 
 // Photos in public/photos/
@@ -100,7 +100,7 @@ export default function LoveSite() {
         <div className="max-w-5xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-10 items-center">
           <div className="relative">
             <span className="inline-flex items-center gap-2 text-rose-600 text-sm font-medium bg-rose-50 border border-rose-100 rounded-full px-3 py-1">
-              Since 13/07/2025
+               Since {new Date(IMPORTANT_DATE).toLocaleDateString()}
             </span>
             <h1 className="mt-4 text-4xl md:text-5xl font-extrabold tracking-tight">
               Hi {HER_NAME},<br />
