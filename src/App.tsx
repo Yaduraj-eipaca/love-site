@@ -21,13 +21,17 @@ const TAGLINE = "Every day with you is my favorite adventure.";
 const IMPORTANT_DATE = "2025-07-13"; // YYYY-MM-DD
 const PRIMARY_HASHTAG = "";
 
+const asset = (p: string) => new URL(p, import.meta.env.BASE_URL).toString();
+
+
 // Photos in public/photos/
 const initialPhotos: { url: string; alt: string }[] = [
-  { url: "/photos/airport.jpeg", alt: "Smiling together" },
-  { url: "/photos/car.jpeg", alt: "Sunset walk" },
-  { url: "/photos/us.jpeg", alt: "Coffee date" },
-  { url: "/photos/us2.jpeg", alt: "City lights" },
+  { url: asset("photos/airport.jpeg"), alt: "Smiling together" },
+  { url: asset("photos/car.jpeg"), alt: "Sunset walk" },
+  { url: asset("photos/us.jpeg"), alt: "Coffee date" },
+  { url: asset("photos/us2.jpeg"), alt: "City lights" },
 ];
+
 
 const timeline: { date: string; title: string; note?: string }[] = [
   { date: "early sep 2025", title: "We first started talking", note: "I called you when you were with liya and watching something" },
