@@ -21,16 +21,20 @@ const TAGLINE = "Every day with you is my favorite adventure.";
 const IMPORTANT_DATE = "2025-07-13"; // YYYY-MM-DD
 const PRIMARY_HASHTAG = "";
 
-const asset = (p: string) => new URL(p, import.meta.env.BASE_URL).toString();
+// joins your repo base with a public asset path
+const asset = (p: string) =>
+  `${import.meta.env.BASE_URL}${p.replace(/^\/+/, "")}`;
+
 
 
 // Photos in public/photos/
-const initialPhotos: { url: string; alt: string }[] = [
+const initialPhotos = [
   { url: asset("photos/airport.jpeg"), alt: "Smiling together" },
-  { url: asset("photos/car.jpeg"), alt: "Sunset walk" },
-  { url: asset("photos/us.jpeg"), alt: "Coffee date" },
-  { url: asset("photos/us2.jpeg"), alt: "City lights" },
+  { url: asset("photos/car.jpeg"),     alt: "Sunset walk" },
+  { url: asset("photos/us.jpeg"),      alt: "Coffee date" },
+  { url: asset("photos/us2.jpeg"),     alt: "City lights" },
 ];
+
 
 
 const timeline: { date: string; title: string; note?: string }[] = [
